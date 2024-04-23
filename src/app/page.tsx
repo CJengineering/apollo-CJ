@@ -1,27 +1,19 @@
-import { CallToAction } from '@/components/CallToAction'
-import { Faqs } from '@/components/Faqs'
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
-import { Hero } from '@/components/Hero'
-import { Pricing } from '@/components/Pricing'
-import { PrimaryFeatures } from '@/components/PrimaryFeatures'
-import { SecondaryFeatures } from '@/components/SecondaryFeatures'
-import { Testimonials } from '@/components/Testimonials'
+import { getStoryblokApi, StoryblokStory } from '@storyblok/react/rsc'
 
-export default function Home() {
+
+export default async function Home() {
+  const { data } = await fetchData()
+
   return (
-    <>
-      <Header />
-      <main>
-        <Hero />
-        <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Testimonials />
-        <Pricing />
-        <Faqs />
-      </main>
-      <Footer />
-    </>
+    <div>
+      <StoryblokStory story={data.story} />
+    </div>
   )
+}
+
+export async function fetchData() {
+  let sbParams = { version: 'draft' as 'draft' | 'published' }
+
+  const storyblokApi = getStoryblokApi()
+  return storyblokApi.get(`cdn/stories/home`, sbParams, { cache: 'no-store' })
 }

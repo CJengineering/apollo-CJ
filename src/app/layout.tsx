@@ -1,9 +1,15 @@
 import { Inter, Lexend } from 'next/font/google'
 import clsx from 'clsx'
+import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+ 
 
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
-
+import StoryblokProvider from '@/components/StoryblokProvider';
+storyblokInit({
+  accessToken: "931fmRZyXrz47Xz9fJHU5gtt",
+  use: [apiPlugin],
+});
 export const metadata: Metadata = {
   title: {
     template: '%s - TaxPal',
@@ -31,6 +37,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <StoryblokProvider>
     <html
       lang="en"
       className={clsx(
@@ -41,5 +48,6 @@ export default function RootLayout({
     >
       <body className="flex h-full flex-col">{children}</body>
     </html>
+    </StoryblokProvider>
   )
 }
