@@ -9,7 +9,7 @@ export interface BlokType {
 }
 
 const Page = ({ blok }: { blok: BlokType }) => (
-  <main {...storyblokEditable(blok)} className="bg-black">
+  <main {...storyblokEditable(blok)} >
     {blok.body?.map((nestedBlok) => (
       <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}
