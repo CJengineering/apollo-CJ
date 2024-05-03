@@ -6,13 +6,10 @@ import TocDummy from '@/components/test components/TocDummy'
 import React from 'react'
 import TestPageComp from './test'
 
-export default function TestPage({ children }: { children: React.ReactNode }) {
+export default function TestPage() {
   return (
     <>
-      <LayoutMain
-        mainContent={<TestPageComp/>}
-        tocContent={<TocDummy />}
-      />
+      <LayoutMain mainContent={<TestPageComp />} tocContent={<TocDummy />} />
     </>
   )
 }

@@ -2,7 +2,11 @@ import { ListSmallProps } from '@/interfaces'
 import React from 'react'
 
 export default function ListSmall({ data }: ListSmallProps) {
+  if (!data ) {
+    return <div></div>;
+  }
   return (
+    
     <div>
       {Object.keys(data).map((key) => (
         <div key={key}>
@@ -10,7 +14,7 @@ export default function ListSmall({ data }: ListSmallProps) {
 
           <div>
        
-            {data[key].map((item, index) => (
+            {data[key] &&  data[key]?.map((item, index) => (
               <div className="text-tiny" key={index}>
                 {item}
               </div>

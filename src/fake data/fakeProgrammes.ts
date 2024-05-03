@@ -12,7 +12,7 @@ export const rowDataExample: RowData = {
       },
       content: {
         logo: {
-          url: logo
+          url: "../images/J-WAFS_DARK_SHOT_PNG 1 (1).png" 
         },
         research: {
           data: {

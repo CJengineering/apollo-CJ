@@ -120,7 +120,7 @@ function TableRow({ repository }: RowData) {
                     <div className="text-tiny font-bold uppercase">impact</div>
                     <div className="grid grid-cols-3">
                     {repository.content.stats.map((stat: StatProps) => (
-                      <Stats title={stat.title} content={stat.content} />
+                      <Stats key={stat.title} title={stat.title} content={stat.content} />
                     ))}
                     </div>
                   </div>
@@ -128,15 +128,15 @@ function TableRow({ repository }: RowData) {
                     <div className="text-tiny font-bold uppercase ">news</div>
                     <div className="block">
                       {repository.content.listContent.map((content: ListContentProps) => (
-                        <ListContent title={content.title} source={content.source} date={content.date} />
+                        <ListContent key={content.title} title={content.title} source={content.source} date={content.date} />
                       ))}
                     </div>
                   </div>
                   <div>
                     <div className="text-small uppercase ">features</div>
                     <div className=" grid grid-cols-3 ">
-                      {repository.content.features.map((feature) => (
-                        <CardSquaredImage imageUrl={feature.image.imageUrl} />
+                      {repository.content.features.map((feature,index) => (
+                        <CardSquaredImage key={index}  imageUrl={feature.image.imageUrl} />
                       ))}
                    
                     </div>
@@ -171,7 +171,7 @@ export default function TableCJ() {
         <div className=" py-3 text-left font-semibold uppercase tracking-wider text-gray-600"></div>
       </div>
       {/* Row */}
-      <TableRow {...rowDataExample} />
+      <TableRow  {...rowDataExample} />
     </div>
   )
 }

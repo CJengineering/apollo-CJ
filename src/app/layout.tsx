@@ -25,7 +25,7 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-inter',
 })
-export const PatrickHand = Patrick_Hand({
+ const PatrickHand = Patrick_Hand({
 subsets: ['latin'],
 weight: ['400'],
 variable: '--font-patrick-hand',
