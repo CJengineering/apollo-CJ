@@ -1,3 +1,111 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+
+/* Path: src/styles/fonts.css */
+/* Costa Regular */
+@font-face {
+  font-family: 'Costa';
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/CostaPtf-Regular.otf') format('opentype');
+}
+/* Costa Light */
+@font-face {
+    font-family: 'Costa';
+   font-weight: 300;
+    font-display: swap;
+    src: url('../fonts/CostaPtf-Light.otf') format('opentype');
+  }
+  /* Costa Italic */
+@font-face {
+    font-family: 'Costa';
+    font-style: italic ;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/CostaPtf-Italic.otf') format('opentype');
+  }
+  /* Costa Extra Bold */
+@font-face {
+    font-family: 'Costa';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url('../fonts/CostaPtf-ExtraBold.otf') format('opentype');
+  }
+  /* Costa Demi */
+@font-face {
+    font-family: 'Costa';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('../fonts/CostaPtf-Demi.otf') format('opentype');
+  }
+  /* Costa Bold */
+@font-face {
+    font-family: 'Costa';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('../fonts/CostaPtf-Bold.otf') format('opentype');
+  }
+.costa-regular{
+    font-family: 'Costa';
+    font-style: normal;
+
+}
+.costa-light{
+    font-family: 'Costa';
+    font-weight: 300;
+
+}
+.costa-italic{
+    font-family: 'Costa';
+    font-weight: 400;
+    font-style: italic;
+
+}
+.costa-extra-bold{
+    font-family: 'Costa';
+    font-weight: 800;
+
+}
+.costa-demi{
+    font-family: 'Costa';
+    font-weight: 600;
+
+}
+.costa-bold{
+    font-family: 'Costa';
+    font-weight: 700;
+
+}
+.text-large{
+    font-size: 1.25rem;
+    font-family: var(--font-ibm-plex-sans);
+
+}
+.text-medium{
+    font-size: 1.125rem;
+    font-family: var(--font-ibm-plex-sans);
+
+}
+.text-regular{
+    font-size: 1rem;
+    font-family: var(--font-ibm-plex-sans);
+
+}
+.text-small{
+    font-size: 0.875rem;
+    font-family: var(--font-ibm-plex-sans);
+
+}
+
+.text-tiny{
+    font-size: 0.75rem;
+    font-family: var(--font-ibm-plex-sans);
+
+}

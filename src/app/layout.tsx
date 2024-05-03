@@ -1,4 +1,4 @@
-import { Inter, Lexend } from 'next/font/google'
+import { Inter, Lexend, Patrick_Hand } from 'next/font/google'
 import clsx from 'clsx'
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
  
@@ -6,6 +6,7 @@ import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import '@/styles/tailwind.css'
 import { type Metadata } from 'next'
 import StoryblokProvider from '@/components/StoryblokProvider';
+import { ibm_plex_mono, ibm_plex_sans } from './fonts';
 storyblokInit({
   accessToken: "931fmRZyXrz47Xz9fJHU5gtt",
   use: [apiPlugin],
@@ -24,6 +25,12 @@ const inter = Inter({
   display: 'swap',
   variable: '--font-inter',
 })
+export const PatrickHand = Patrick_Hand({
+subsets: ['latin'],
+weight: ['400'],
+variable: '--font-patrick-hand',
+
+})
 
 const lexend = Lexend({
   subsets: ['latin'],
@@ -37,17 +44,19 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <StoryblokProvider>
+  
     <html
       lang="en"
       className={clsx(
         'h-full scroll-smooth bg-white antialiased',
         inter.variable,
         lexend.variable,
+       
+
       )}
     >
-      <body className="flex h-full flex-col ">{children}</body>
+      <body className={`${ibm_plex_mono.variable} ${ibm_plex_sans.variable} ${PatrickHand.variable}`}>{children}</body>
     </html>
-    </StoryblokProvider>
+
   )
 }

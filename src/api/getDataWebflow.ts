@@ -41,3 +41,5 @@ const getData = async () => {
       return { props: { items: [], error: 'eror', fetchTime: 0 } }
     }
   }
+
+  export const handleClick = () => console.log('Button clicked!')

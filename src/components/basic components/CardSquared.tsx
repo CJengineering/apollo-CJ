@@ -6,11 +6,11 @@ import { BeakerIcon, VideoCameraIcon } from '@heroicons/react/24/solid'
 import { CardHorizontalImageProps } from '@/interfaces';
 
 
-export default function CardHorizontalImage({ imageUrl}: CardHorizontalImageProps) {
+export default function CardSquaredImage({ imageUrl}: CardHorizontalImageProps) {
 
   return (
     <div className="relative w-full">
-      <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+      <div className="aspect-square overflow-hidden">
         <Image
           className="h-full w-full object-cover"
           src={imageUrl}

@@ -27,11 +27,15 @@ export default {
       fontFamily: {
         sans: 'var(--font-inter)',
         display: 'var(--font-lexend)',
+        ibmMono: 'var(--font-ibm-plex-mono)',
+        ibmSans: 'var(--font-ibm-plex-sans)',
+        patrickHand: 'var(--font-patrick-hand)',
       },
       maxWidth: {
         '2xl': '40rem',
       },
     },
   },
-  plugins: [formsPlugin, headlessuiPlugin],
+  plugins: [formsPlugin, headlessuiPlugin,
+    require('@headlessui/tailwindcss')({ prefix: 'ui' })],
 } satisfies Config

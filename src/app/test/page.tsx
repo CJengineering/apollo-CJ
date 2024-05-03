@@ -1,15 +1,18 @@
-import FiltredNews from '@/components/FiltredNews'
+import { Hero } from '@/components/Hero'
+import { Pricing } from '@/components/Pricing'
+import LayoutMain from '@/components/layout/LayoutMain'
+import MainContentDummy from '@/components/test components/MainContentDummy'
+import TocDummy from '@/components/test components/TocDummy'
 import React from 'react'
+import TestPageComp from './test'
 
-export default function CardLearn() {
+export default function TestPage({ children }: { children: React.ReactNode }) {
   return (
-    <div className='mx-auto grid grid-cols-3 gap-12'>
-        <FiltredNews programme='627e379dd27c0445d4f75ac4' ></FiltredNews>
-        <FiltredNews programme='627e3739d61c6b447a8f09c5' ></FiltredNews>
-        <FiltredNews programme='61ee828a15a318c663bde6fb' ></FiltredNews>
-
-
-
-    </div>
+    <>
+      <LayoutMain
+        mainContent={<TestPageComp/>}
+        tocContent={<TocDummy />}
+      />
+    </>
   )
 }
