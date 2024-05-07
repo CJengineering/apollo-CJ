@@ -1,4 +1,4 @@
-export default function ProgrammesJameelClinicAiToolsPageAr() {
+export default function AboutFamilyTeamTemplatePageAr() {
     return (
       <div className='mx-auto grid grid-cols-3 gap-12'>
       </div>
