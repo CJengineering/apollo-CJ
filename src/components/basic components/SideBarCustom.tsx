@@ -319,8 +319,8 @@ function NavigationLink({ item }: { item: any }) {
 
 export default function SideBarCustom() {
   return (
-    <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6" >
-      <nav className="flex flex-1 flex-col">
+    <div className="bg-green-100 max-w-[350px] flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 px-6" >
+      <nav className=" flex flex-1 flex-col">
         <ul role="list" className="flex flex-1 flex-col gap-y-2">
           {navigation.map((item) => (
             <li key={item.name}>

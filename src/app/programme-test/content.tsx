@@ -93,8 +93,8 @@ export default function ContentProgramme({ repository }: RowData) {
       </SectionUnderline>
       <SectionUnderline>
         <div>
-          <div className="text-tiny mb-4 font-bold uppercase">impact</div>
-          <div className="grid grid-cols-3 gap-3">
+          <div className="text-tiny mb-4 font-bold uppercase">features</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
             <div>
               <CardHorizontal imageUrl={image} />
               <div className="text-small font-bold"> What is J-WAFS ?</div>
@@ -154,7 +154,7 @@ export default function ContentProgramme({ repository }: RowData) {
       <SectionUnderline>
         <div>
           <div className="text-tiny mb-4 font-bold uppercase">impact</div>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="flex gap-3">
               <CardSquared imageUrl={image} />
               <div className="flex  w-full items-center">
@@ -191,7 +191,7 @@ export default function ContentProgramme({ repository }: RowData) {
       <SectionUnderline>
         <div>
           <div className="text-tiny mb-4 font-bold uppercase">events</div>
-          <div className="w-[400px]">
+          <div className=" w-[100px] 2xl:w-[400px]">
             <CardSquared imageUrl={image} />
             <div className="flex  w-full items-center">
               <ListContent

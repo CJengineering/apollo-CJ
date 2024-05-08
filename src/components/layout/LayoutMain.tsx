@@ -15,7 +15,7 @@ export default function LayoutMain({
     <div>
       <NavBarDummy></NavBarDummy>
       <div className=" flex h-full   ">
-        <div className="">
+        <div className="hidden  md:block">
           <SideBarWrapper />
         </div>
 
