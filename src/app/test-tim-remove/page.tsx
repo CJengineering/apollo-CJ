@@ -1,7 +1,7 @@
 import FiltredNews from '@/components/FiltredNews'
 import React from 'react'
 
-export default function CardLearn() {
+export default function TimTestPageFilterPage() {
   return (
     <div className='mx-auto grid grid-cols-3 gap-12'>
         <FiltredNews programme='627e379dd27c0445d4f75ac4' ></FiltredNews>
