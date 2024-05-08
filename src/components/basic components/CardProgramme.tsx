@@ -12,12 +12,7 @@ export default function CardProgramme({
   return (
     <div className="relative w-full">
       <div className="aspect-square overflow-hidden">
-        <Image
-          className="h-full w-full object-cover"
-          src={imageUrl}
-          alt=""
-          unoptimized
-        />
+        <Image className="h-full w-full object-cover" src={imageUrl} alt="" />
 
         <div className="absolute inset-0 bg-gray-600 opacity-80"></div>
         <div className="absolute bottom-4 left-4 text-white">

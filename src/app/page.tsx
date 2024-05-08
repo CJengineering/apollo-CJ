@@ -8,7 +8,7 @@ import SourceContainer from '@/components/layout/SourceContainer'
 import Header4 from '@/components/typography/Header4'
 import ButtonCJ from '@/components/basic components/ButtonCJ'
 
-import { handleClick } from '@/api/getDataWebflow'
+
 import Stats from '@/components/basic components/Stats'
 import TabsCJ from '@/components/custom components/TabsCJ'
 import TableCJ from '@/components/custom components/TableCJ'

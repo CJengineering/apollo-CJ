@@ -11,6 +11,7 @@ import ListSmall from '../basic components/ListSmall'
 import ListContent from '../basic components/ListContent'
 import ButtonCJ from '../basic components/ButtonCJ'
 import Stats from '../basic components/Stats'
+import logo from '@/images/J-WAFS_DARK_SHOT_PNG 1 (1).png'
 import {
   CardHorizontalImageProps,
   ListContentProps,
@@ -38,9 +39,9 @@ function TableRow({ repository }: RowData) {
       <Disclosure>
         {({ open }) => (
           <>
-            <div className="grid  min-w-full grid-cols-5  border-gray-300">
+            <div className="grid min-w-full grid-cols-5 px-2  border-gray-300">
               <div
-                className={`py-3 text-left text-gray-600 ${open ? 'opacity-100' : 'opacity-100'}`}
+                className={`col-span-4 py-3 text-left text-gray-600 md:col-span-1 ${open ? 'opacity-100' : 'opacity-100'}`}
               >
                 <h2 className="costa-bold text-lg uppercase">
                   {repository.top.name}
@@ -50,23 +51,23 @@ function TableRow({ repository }: RowData) {
                 </h3>
               </div>
               <div
-                className={`py-3 text-left text-gray-600 ${open ? 'opacity-0' : 'opacity-100'}`}
+                className={`hidden py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
               >
                 <div className="d">{repository.top.mission}</div>
               </div>
               <div
-                className={`flex items-center py-3 text-left text-gray-600 ${open ? 'opacity-0' : 'opacity-100'}`}
+                className={` hidden items-center py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
               >
                 <div className="text-sm"> {repository.top.year}</div>
               </div>
               <div
-                className={`flex items-center py-3 text-left text-gray-600 ${open ? 'opacity-0' : 'opacity-100'}`}
+                className={` hidden items-center py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
               >
                 <div className="text-sm">
                   {repository.top.partners.join(', ')}
                 </div>
               </div>
-              <div className="flex items-center justify-end  py-3 text-right text-gray-600">
+              <div className="flex items-center justify-end   py-3 text-right text-gray-600">
                 <>
                   <Disclosure.Button className="">
                     <div
@@ -87,58 +88,83 @@ function TableRow({ repository }: RowData) {
                   <div>
                     <Image
                       className=" object-fit w-24"
-                      src={repository.content.logo.url}
+                      src={logo}
                       alt=""
-                      unoptimized
+                    
                     />
                   </div>
-                  <div className="grid grid-cols-3">
+                  <div className="grid grid-cols-3 gap-2 py-4 ">
                     <div>
-                      <ListSmall data={repository.content.research?.data || {}}  />
+                      <ListSmall
+                        data={repository.content.research?.data || {}}
+                      />
                     </div>
                     <div>
-                      <ListSmall data={repository.content.established?.data || {}}/>
+                      <ListSmall
+                        data={repository.content.established?.data || {}}
+                      />
                     </div>
                     <div>
-                      <ListSmall data={repository.content.headquarters?.data || {}} />
+                      <ListSmall
+                        data={repository.content.headquarters?.data || {}}
+                      />
                     </div>
                   </div>
-                  <p>
-                 {repository.content.fullDescription}
-                  </p>
-
+                  <p>{repository.content.fullDescription}</p>
+                  <div className="py-2"></div>
                   <SocialMediaList {...repository.content.socialMediaLinks} />
+
+                  <div className="py-2"></div>
                   <ButtonCJ>Discover</ButtonCJ>
                 </div>
+              
                 <div>
+                <div className="py-2"></div>
                   <div className="grid grid-cols-3">
                     <ListSmall data={repository.content.leadership?.data} />
-                    <ListSmall data={repository.content['key initiatives']?.data} />
-                    <ListSmall data={repository.content['key partners']?.data} />
+                    <ListSmall
+                      data={repository.content['key initiatives']?.data}
+                    />
+                    <ListSmall
+                      data={repository.content['key partners']?.data}
+                    />
                   </div>
                   <div>
                     <div className="text-tiny font-bold uppercase">impact</div>
-                    <div className="grid grid-cols-3">
-                    {repository.content.stats.map((stat: StatProps) => (
-                      <Stats key={stat.title} title={stat.title} content={stat.content} />
-                    ))}
+                    <div className="grid grid-cols-3 ">
+                      {repository.content.stats.map((stat: StatProps) => (
+                        <Stats
+                          key={stat.title}
+                          title={stat.title}
+                          content={stat.content}
+                        />
+                      ))}
                     </div>
                   </div>
                   <div>
                     <div className="text-tiny font-bold uppercase ">news</div>
                     <div className="block">
-                      {repository.content.listContent.map((content: ListContentProps) => (
-                        <ListContent key={content.title} title={content.title} source={content.source} date={content.date} />
-                      ))}
+                      {repository.content.listContent.map(
+                        (content: ListContentProps) => (
+                          <ListContent
+                            key={content.title}
+                            title={content.title}
+                            source={content.source}
+                            date={content.date}
+                          />
+                        ),
+                      )}
                     </div>
                   </div>
                   <div>
                     <div className="text-small uppercase ">features</div>
                     <div className=" grid grid-cols-3 ">
-                      {repository.content.features.map((feature,index) => (
-                        <CardSquaredImage key={index}  imageUrl={feature.image.imageUrl} />
+                      {repository.content.features.map((feature, index) => (
+                        <CardSquaredImage
+                          key={index}
+                          imageUrl={feature.image.imageUrl}
+                        />
                       ))}
-                   
                     </div>
                   </div>
                 </div>
@@ -154,24 +180,29 @@ function TableRow({ repository }: RowData) {
 export default function TableCJ() {
   return (
     <div className="overflow-x-auto">
-      <div className="text-small grid min-w-full grid-cols-5 border-y-[1px]  border-gray-300 bg-gray-100 ">
+      <div className="text-small grid min-w-full grid-cols-5 px-2  border-y-[1px]  border-gray-300 bg-gray-100 ">
         {/* Header */}
         <div className=" py-3 text-left font-semibold uppercase tracking-wider text-gray-600">
           Name
         </div>
-        <div className=" py-3 text-left font-semibold uppercase tracking-wider text-gray-600">
+        <div className=" hidden py-3 text-left  font-semibold uppercase tracking-wider text-gray-600 md:block ">
           Mission
         </div>
-        <div className="py-3 text-left font-semibold uppercase tracking-wider text-gray-600">
+        <div className="hidden py-3 text-left font-semibold uppercase tracking-wider text-gray-600 md:block">
           Established
         </div>
-        <div className=" py-3 text-left font-semibold uppercase tracking-wider text-gray-600">
+        <div className=" hidden py-3 text-left font-semibold uppercase tracking-wider text-gray-600 md:block">
           Key Partners
         </div>
         <div className=" py-3 text-left font-semibold uppercase tracking-wider text-gray-600"></div>
       </div>
       {/* Row */}
-      <TableRow  {...rowDataExample} />
+      <TableRow {...rowDataExample} />
+      <TableRow {...rowDataExample} />
+      <TableRow {...rowDataExample} />
+      <TableRow {...rowDataExample} />
+      <TableRow {...rowDataExample} />
+      <TableRow {...rowDataExample} />
     </div>
   )
 }

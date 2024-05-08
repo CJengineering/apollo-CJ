@@ -1,4 +1,4 @@
-const getData = async () => {
+export   const getData = async () => {
     const startTime = Date.now()
     const baseUrl =
       'https://api.webflow.com/v2/collections/61ee828a15a3185c99bde543/items'
@@ -42,4 +42,3 @@ const getData = async () => {
     }
   }
 
-  export const handleClick = () => console.log('Button clicked!')

@@ -109,3 +109,9 @@
     font-family: var(--font-ibm-plex-sans);
 
 }
+.spacer {
+    display: block;
+    height: 80px; /* Adjust the height as needed */
+    margin-top: -80px; /* Adjust the negative margin to offset the height */
+    visibility: hidden;
+}

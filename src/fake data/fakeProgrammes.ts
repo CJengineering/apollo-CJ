@@ -4,21 +4,15 @@ import logo from "../images/J-WAFS_DARK_SHOT_PNG 1 (1).png";
 export const rowDataExample: RowData = {
     repository: {
       top: {
-        name: "InnovateX",
-        description: "Leading the way in sustainable technology.",
-        mission: "To innovate and promote sustainable practices in technology.",
-        year: "2012",
-        partners: ["TechGlobal", "EcoSolutions"]
+        name: "MIT J-WAFS",
+        description: "The MIT Abdul Latif Jameel Water and Food Systems Lab (J-WAFS) ",
+        mission: "Securing humankind’s vital resources",
+        year: "2014",
+        partners: ["MIT"]
       },
       content: {
-        logo: {
-          url: "../images/J-WAFS_DARK_SHOT_PNG 1 (1).png" 
-        },
-        research: {
-          data: {
-            findings: ["Finding 1", "Finding 2"]
-          }
-        },
+      
+   
         established: {
           data: {
             year: ["2012"]
@@ -26,26 +20,26 @@ export const rowDataExample: RowData = {
         },
         headquarters: {
           data: {
-            location: ["New York, NY"]
+            headquarters: ["MIT", "Cambridge", "USA"]
           }
         },
         leadership: {
           data: {
-            ceo: ["John Doe"],
-            cto: ["Jane Smith"]
+            leadership: ["John Liendhard", "Renee Robins", "Rohit Karnik"],
+           
           }
         },
         "key initiatives": {
           data: {
-            initiatives: ["GreenTech Program", "AI for Earth"]
+            "key initiatives": ["GreenTech Program", "AI for Earth"]
           }
         },
         "key partners": {
           data: {
-            partners: ["GreenTech Innovators", "AI Ventures"]
+            "key partners": ["GreenTech Innovators", "AI Ventures"]
           }
         },
-        fullDescription: "InnovateX is at the forefront of integrating sustainable practices with cutting-edge technology, driving significant change across industries.",
+        fullDescription: "Fuelling research, innovation and collaboration to solve urgent global water and food systems challenges",
         socialMediaLinks: {
           instagram: {
             url: "https://instagram.com/innovatex",
@@ -70,12 +64,28 @@ export const rowDataExample: RowData = {
         },
         stats: [
           {
-            title: "21M",
-            content: "funds"
+            title: "21.6M USD",
+            content: "funded research"
           },
           {
-            title: "500K",
+            title: "20.1M USD",
+            content: "follow-on funding"
+          },
+          {
+            title: "5 MIT",
             content: "Results"
+          },
+          {
+            title: "40+ ",
+            content: "Founded labs"
+          },
+          {
+            title: "17 ",
+            content: "Countries reached"
+          },
+          {
+            title: "8",
+            content: "spinouts"
           }
         ],
         listContent: [
@@ -101,4 +111,46 @@ export const rowDataExample: RowData = {
       }
     }
   };
+  export const rowJwafs :RowData = 
+  {
+    repository: {
+     top: {
+        "name": "Abdul Latif Jameel Water and Food Systems Lab",
+        "description": "Fuelling research, innovation and collaboration to solve urgent global water and food systems challenges",
+        "mission": "Securing humankind’s vital resources",
+        "year": "2014",
+        "partners": ["MIT"]
+      },
+      content: {
+   
+        headquarters: {
+          "data": {
+            "location": ["Cambridge, USA"]
+          }
+        },
+        leadership: {
+          "data": {
+            "leadership": ["John Lienhard", "Renee Robins", "Rohit Karnik"]
+          }
+        },
+        "key initiatives": {
+          "data": {
+            "key initiatives": ["Research", "Grants", "Spinouts"]
+          }
+        },
+        socialMediaLinks: {
+          "linkedin": { "url": '', "name": 'null' },
+          "instagram": { "url": 'null', "name": 'null' },
+          "facebook": { "url": 'null', "name": 'null' },
+          "youtube": { "url": 'null', "name": 'null' },
+          "twitter": { "url": 'null', "name": 'null' }
+        },
+        "fullDescription": "Fuelling research, innovation and collaboration to solve urgent global water and food systems challenges",
+        stats: [],
+        listContent: [],
+        features: []
+      
+      }
+    }
+  }
   

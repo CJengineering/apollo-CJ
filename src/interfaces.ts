@@ -51,7 +51,7 @@ export interface RowTopData {
   partners: string[]
 }
 export interface RowContentData {
-  logo: Image
+ 
   research?: ListSmallProps
   established?: ListSmallProps
   headquarters?: ListSmallProps
@@ -67,7 +67,7 @@ export interface RowContentData {
       image: CardHorizontalImageProps
       title: string
     },
-  ]
+  ] | []
 }
 
 export interface RowData {
@@ -76,4 +76,17 @@ export interface RowData {
     content: RowContentData
   }
   
+}
+export interface NavItem {
+  name: string;
+  href: string;
+  icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  current: boolean;
+  children?: NavSubItem[];
+}
+
+export interface NavSubItem {
+  name: string;
+  href: string;
+  current?: boolean; // Optional, as not all subItems might use it
 }
