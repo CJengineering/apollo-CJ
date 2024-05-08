@@ -1,4 +1,4 @@
-export default function JwelMembersPageAr() {
+export default function ProgrammesJwelMembersPageAr() {
     return (
       <div className='mx-auto grid grid-cols-3 gap-12'>
       </div>
