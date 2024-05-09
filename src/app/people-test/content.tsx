@@ -27,9 +27,9 @@ export default function ContentPeople() {
   return (
     <div className="">
       <SectionUnderline>
-        <div className=" grid w-[100%] grid-cols-1 md:grid-cols-3 gap-3 ">
+        <div className=" grid w-[100%] grid-cols-1 gap-3 md:grid-cols-3 ">
           <div className="col-span-1 ">
-            <div className="hidden md:block my-4 h-48 w-48">
+            <div className="my-4 hidden h-48 w-48 md:block">
               <Image
                 className="h-full w-full rounded-full object-cover"
                 src={profile}
@@ -74,7 +74,7 @@ export default function ContentPeople() {
             </div>
           </div>
           <div className="col-span-2 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
               <div className="py-4">
                 <CardHorizontal imageUrl={paysage1} />
                 <ListContent
@@ -105,16 +105,15 @@ export default function ContentPeople() {
                   and health in the department of electrical engineering and
                   computer science and a member of the Computer Science and
                   Artificial Intelligence Laboratory.
-               
                 </p>
                 <p>
-                    Regina’s research interest focuses on machine learning
-                    models for molecular modelling with applications to drug
-                    discovery and clinical AI. She also concentrates on natural
-                    language processing and oncology, developing algorithms that
-                    can learn from cancer patient data to improve models of
-                    disease progression, treatment and potential cures.
-                  </p>
+                  Regina’s research interest focuses on machine learning models
+                  for molecular modelling with applications to drug discovery
+                  and clinical AI. She also concentrates on natural language
+                  processing and oncology, developing algorithms that can learn
+                  from cancer patient data to improve models of disease
+                  progression, treatment and potential cures.
+                </p>
               </div>
             </div>
           </div>
@@ -154,6 +153,7 @@ export default function ContentPeople() {
               },
             ].map((item) => (
               <ListContent
+                key={item.title}
                 title={item.title}
                 source={item.source}
                 date={item.date}
@@ -165,7 +165,7 @@ export default function ContentPeople() {
       <SectionUnderline tag="IMPACT">
         <div>
           <h2 className="text-tiny mb-4 font-bold uppercase">Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-6 gap-3">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-6">
             <div>
               <CardSquared imageUrl={image} />
               <div className="text-small font-bold"> What is J-WAFS ?</div>
@@ -188,7 +188,7 @@ export default function ContentPeople() {
       <SectionUnderline>
         <div>
           <div className="text-tiny mb-4 font-bold uppercase">multimedia</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div className="w-50 flex gap-3 ">
               <CardSquared imageUrl={image} />
 

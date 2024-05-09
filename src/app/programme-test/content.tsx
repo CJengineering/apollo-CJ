@@ -18,7 +18,6 @@ import spinouts from '@/images/Spinouts_J-WAFS.png'
 import fact from '@/images/FACT Alliance_J-WAFS.png'
 import jameelIndex from '@/images/Jameel Index_J-WAFS.png'
 
-
 const socialMediaData: SocialMediaLinks = {
   instagram: {
     url: 'https://instagram.com/yourprofile',
@@ -40,11 +39,11 @@ export default function ContentProgramme({ repository }: RowData) {
               src={logo}
               alt="Organization Logo"
             />
-            <h1 className="costa-extra-bold py-4 text-xl lg:text-2xl font-bold">
+            <h1 className="costa-extra-bold py-4 text-xl font-bold lg:text-2xl">
               {repository.top.description}
             </h1>
           </div>
-          <div className="flex justify-between lg:grid lg:grid-cols-3 py-4">
+          <div className="flex justify-between py-4 lg:grid lg:grid-cols-3">
             <ListSmall data={repository.content['key partners']?.data} />
             <ListSmall data={repository.content.established?.data} />
             <ListSmall data={repository.content.headquarters?.data} />
@@ -109,14 +108,13 @@ export default function ContentProgramme({ repository }: RowData) {
           <div className="text-tiny mb-4 font-bold uppercase">features</div>
           <div className="grid grid-cols-1 gap-2 lg:flex lg:space-x-4 ">
             {[
-             { text:'Research',image:research},
-              { text:'Funding',image:funding},
-              { text:'Spinouts',image:spinouts},
-              { text:'FACT Alliance',image:fact},
-              { text:'Jameel Index',image:jameelIndex},
-            
+              { text: 'Research', image: research },
+              { text: 'Funding', image: funding },
+              { text: 'Spinouts', image: spinouts },
+              { text: 'FACT Alliance', image: fact },
+              { text: 'Jameel Index', image: jameelIndex },
             ].map((item) => (
-              <div>
+              <div key={item.text}>
                 <CardSquared imageUrl={item.image} />
                 <div className="text-small font-bold"> {item.text}</div>
               </div>
@@ -158,6 +156,7 @@ export default function ContentProgramme({ repository }: RowData) {
               },
             ].map((item) => (
               <ListContent
+                key={item.title}
                 title={item.title}
                 source={item.source}
                 date={item.date}
@@ -216,6 +215,7 @@ export default function ContentProgramme({ repository }: RowData) {
               },
             ].map((item) => (
               <ListContent
+                key={item.title}
                 title={item.title}
                 source={item.source}
                 date={item.date}
