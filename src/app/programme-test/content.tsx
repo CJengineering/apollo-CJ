@@ -12,6 +12,12 @@ import SectionUnderline from '@/components/layout/SectionUnderline'
 import CardHorizontal from '@/components/basic components/CardHorizontal'
 import CardSquared from '@/components/basic components/CardSquared'
 import logo from '@/images/J-WAFS_DARK_SHOT_PNG 1 (1).png'
+import research from '@/images/Research_J-WAFS.png'
+import funding from '@/images/Funding_J-WAFS.png'
+import spinouts from '@/images/Spinouts_J-WAFS.png'
+import fact from '@/images/FACT Alliance_J-WAFS.png'
+import jameelIndex from '@/images/Jameel Index_J-WAFS.png'
+
 
 const socialMediaData: SocialMediaLinks = {
   instagram: {
@@ -26,24 +32,24 @@ const socialMediaData: SocialMediaLinks = {
 export default function ContentProgramme({ repository }: RowData) {
   return (
     <div>
-      <div className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div>
-          <h1 className="costa-extra-bold py-4 text-2xl font-bold">
-            {repository.top.name}
-          </h1>
           <div className="py-4">
             <Image
               className="object-fit w-24"
               src={logo}
               alt="Organization Logo"
             />
+            <h1 className="costa-extra-bold py-4 text-xl lg:text-2xl font-bold">
+              {repository.top.description}
+            </h1>
           </div>
-          <div className="grid grid-cols-3 py-4">
+          <div className="flex justify-between lg:grid lg:grid-cols-3 py-4">
             <ListSmall data={repository.content['key partners']?.data} />
+            <ListSmall data={repository.content.established?.data} />
+            <ListSmall data={repository.content.headquarters?.data} />
           </div>
-          <p className="py-4">
-           {repository.top.description}
-          </p>
+          <p className="py-4">{repository.content.fullDescription}</p>
 
           <SocialMediaList
             instagram={socialMediaData.instagram}
@@ -52,116 +58,125 @@ export default function ContentProgramme({ repository }: RowData) {
         </div>
         <div>
           <div className="grid grid-cols-3 py-4">
-            <ListSmall data={repository.content.headquarters?.data} />
-            <ListSmall
-              data={{ 'Key Initiatives': ['Climate Change', 'Education'] }}
-            />
-            <ListSmall data={{ 'Key Partners': ['UN', 'WHO'] }} />
+            <ListSmall data={repository.content.leadership?.data} />
+            <ListSmall data={repository.content['key initiatives']?.data} />
+            <ListSmall data={repository.content['key partners']?.data} />
+          </div>
+          <div className="py_4">
+            <CardHorizontal imageUrl={image} />
           </div>
 
           <div className="py-4">
             <div className="text-tiny font-bold uppercase ">news</div>
             <div className="block py-4">
               <ListContent
-                title="New Research Initiative"
-                source="Global News"
-                date="2024-05-06"
+                title="A new way to swiftly eliminate micropollutants from water "
+                source="MIT News"
+                date="9 January 2024"
               />
               <ListContent
-                title="Partnership with WHO"
-                source="Health Daily"
-                date="2024-04-28"
+                title="Mining is necessary for the green transition. Here’s why..."
+                source="MIT News"
+                date="23 December 2023"
               />
               <ListContent
-                title="Education Drive"
-                source="Education Today"
-                date="2024-03-14"
+                title="Lebanese MIT professor named winner of Great Arab Minds award "
+                source="MIT News"
+                date="14 November 2024"
               />
             </div>
           </div>
+          <div className="silent text-tiny uppercase">view all -{'>'}</div>
         </div>
       </div>
+      <div className="mt-4 w-full border-t border-gray-300 py-2" />
       <SectionUnderline>
         <div>
           <div className="text-tiny mb-4 font-bold uppercase">impact</div>
-          <div className="grid grid-cols-3">
-            <Stats title="21M" content="Beneficiaries" />
-            <Stats title=" 50+" content="Countries" />
-            <Stats title=" 200+" content="Projects" />
+          <div className="grid grid-cols-2 lg:grid-cols-5">
+            {repository.content.stats.map((stat) => (
+              <Stats
+                key={stat.title}
+                title={stat.title}
+                content={stat.content}
+              />
+            ))}
           </div>
         </div>
       </SectionUnderline>
       <SectionUnderline>
         <div>
           <div className="text-tiny mb-4 font-bold uppercase">features</div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-            <div>
-              <CardHorizontal imageUrl={image} />
-              <div className="text-small font-bold"> What is J-WAFS ?</div>
-            </div>
-            <div>
-              <CardHorizontal imageUrl={image} />
-              <div className="text-small font-bold"> What is J-WAFS ?</div>
-            </div>
-            <div>
-              <CardHorizontal imageUrl={image} />
-              <div className="text-small font-bold"> What is J-WAFS ?</div>
-            </div>
+          <div className="grid grid-cols-1 gap-2 lg:flex lg:space-x-4 ">
+            {[
+             { text:'Research',image:research},
+              { text:'Funding',image:funding},
+              { text:'Spinouts',image:spinouts},
+              { text:'FACT Alliance',image:fact},
+              { text:'Jameel Index',image:jameelIndex},
+            
+            ].map((item) => (
+              <div>
+                <CardSquared imageUrl={item.image} />
+                <div className="text-small font-bold"> {item.text}</div>
+              </div>
+            ))}
           </div>
         </div>
       </SectionUnderline>
       <SectionUnderline>
         <div>
-          <div className="text-tiny font-bold uppercase ">news</div>
-          <div className="grid grid-cols-2 gap-6">
-            <div className="block">
+          <div className="text-tiny font-bold uppercase ">PRESS & NEWS</div>
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-6">
+            {[
+              {
+                title: 'Antibiotic identified by AI',
+                source: 'Nature',
+                date: '12 Dec 2023',
+              },
+              {
+                title:
+                  'Comparison of mammography AI algorithms with a clinical risk model for 5-year breast cancer risk prediction: An observational study',
+                source: 'Nature',
+                date: '2023',
+              },
+              {
+                title: 'Conformal language modeling',
+                source: 'Nature',
+                date: '2023',
+              },
+              {
+                title: 'Conformal language modeling',
+                source: 'Arxiv',
+                date: '2023',
+              },
+              {
+                title:
+                  'The new frontiers of AI: Funding challenges and potential solutions',
+                source: 'Medriva',
+                date: '16 February 2024',
+              },
+            ].map((item) => (
               <ListContent
-                title="New Research Initiative"
-                source="Global News"
-                date="2024-05-06"
+                title={item.title}
+                source={item.source}
+                date={item.date}
               />
-              <ListContent
-                title="Partnership with WHO"
-                source="Health Daily"
-                date="2024-04-28"
-              />
-              <ListContent
-                title="Education Drive"
-                source="Education Today"
-                date="2024-03-14"
-              />
-            </div>
-            <div className="block">
-              <ListContent
-                title="New Research Initiative"
-                source="Global News"
-                date="2024-05-06"
-              />
-              <ListContent
-                title="Partnership with WHO"
-                source="Health Daily"
-                date="2024-04-28"
-              />
-              <ListContent
-                title="Education Drive"
-                source="Education Today"
-                date="2024-03-14"
-              />
-            </div>
+            ))}
           </div>
         </div>
       </SectionUnderline>
       <SectionUnderline>
         <div>
           <div className="text-tiny mb-4 font-bold uppercase">impact</div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             <div className="flex gap-3">
               <CardSquared imageUrl={image} />
               <div className="flex  w-full items-center">
                 <ListContent
-                  title="New Research Initiative"
-                  source="Global News"
-                  date="2024 05 06"
+                  title="The new frontiers of AI: Funding challenges and potential solutions"
+                  source="London, UK"
+                  date="16 February 2024"
                 />
               </div>
             </div>
@@ -169,19 +184,9 @@ export default function ContentProgramme({ repository }: RowData) {
               <CardSquared imageUrl={image} />
               <div className="flex  w-full items-center">
                 <ListContent
-                  title="New Research Initiative"
-                  source="Global News"
-                  date="2024-05-06"
-                />
-              </div>
-            </div>
-            <div className="flex gap-3">
-              <CardSquared imageUrl={image} />
-              <div className="flex  w-full items-center">
-                <ListContent
-                  title="New Research Initiative"
-                  source="Global News"
-                  date="2024-05-06"
+                  title="The new frontiers of AI: Funding challenges and potential solutions"
+                  source="Medriva "
+                  date="16 February 2024"
                 />
               </div>
             </div>
@@ -190,16 +195,32 @@ export default function ContentProgramme({ repository }: RowData) {
       </SectionUnderline>
       <SectionUnderline>
         <div>
-          <div className="text-tiny mb-4 font-bold uppercase">events</div>
-          <div className=" w-[100px] 2xl:w-[400px]">
-            <CardSquared imageUrl={image} />
-            <div className="flex  w-full items-center">
+          <div className="text-tiny font-bold uppercase ">Publications</div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-6">
+            {[
+              {
+                title: 'Antibiotic identified by AI',
+                source: '{author_name}',
+                date: '12 Dec 2023',
+              },
+              {
+                title: 'Conformal language modeling',
+                source: 'Arxiv',
+                date: '2023',
+              },
+              {
+                title:
+                  'Comparison of mammography AI algorithms with a clinical risk model for 5-year breast cancer risk prediction: An observational study',
+                source: 'Nature',
+                date: '2023',
+              },
+            ].map((item) => (
               <ListContent
-                title="New Research Initiative"
-                source="Global News"
-                date="2024-05-06"
+                title={item.title}
+                source={item.source}
+                date={item.date}
               />
-            </div>
+            ))}
           </div>
         </div>
       </SectionUnderline>

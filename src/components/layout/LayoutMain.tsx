@@ -3,6 +3,8 @@ import NavBarDummy from '../test components/NavbarDummy'
 import TestSidebar from '../test components/TestSidebar'
 import SideBarWrapper from '../custom components/SideBarWrapper'
 import SideBarCustom from '../basic components/SideBarCustom'
+import MobileSideBarWrapper from '../custom components/MobileSideBarWrapper'
+import TopNavBar from '../custom components/TopNavBar'
 
 export default function LayoutMain({
   mainContent,
@@ -13,11 +15,12 @@ export default function LayoutMain({
 }) {
   return (
     <div>
-      <NavBarDummy></NavBarDummy>
+     <TopNavBar></TopNavBar>
       <div className=" flex h-full   ">
-        <div className="hidden  md:block">
+        
           <SideBarWrapper />
-        </div>
+          <MobileSideBarWrapper />
+      
 
         <div className="relative mx-auto flex h-full  ">
           <main className="  w-[320px] max-w-[1440px]  sm:w-[600px] md:w-[720px] lg:w-[720px] xl:w-[980px] 2xl:w-[1440px] 2xl:min-w-[1200px] ">

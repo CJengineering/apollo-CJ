@@ -16,10 +16,10 @@ export default function CardProgramme({
 
         <div className="absolute inset-0 bg-gray-600 opacity-80"></div>
         <div className="absolute bottom-4 left-4 text-white">
-          <div className="costa-extra-bold text-5xl uppercase">
+          <div className="costa-extra-bold xl:text-5xl text-xl uppercase">
             {programmeTitle}
           </div>
-          <div className={`text-xl uppercase ${ibm_plex_mono.className}`}>
+          <div className={`xl:text-xl text-small uppercase ${ibm_plex_mono.className}`}>
             {programmeType}
           </div>
         </div>

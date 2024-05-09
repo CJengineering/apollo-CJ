@@ -17,7 +17,7 @@ export default function TabsCJ() {
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
-          <div className="mt-3 grid grid-cols-3 gap-4">
+          <div className="mt-3 grid  lg:grid-cols-3 gap-4">
             {tableCount.map((item, index) => (
               <CardProgramme
                 key={index}

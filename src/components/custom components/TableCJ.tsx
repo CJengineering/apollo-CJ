@@ -110,7 +110,7 @@ function TableRow({ repository }: RowData) {
                       />
                     </div>
                   </div>
-                  <p>{repository.content.fullDescription}</p>
+                  <p className='w-[90%]'>{repository.content.fullDescription}</p>
                   <div className="py-2"></div>
                   <SocialMediaList {...repository.content.socialMediaLinks} />
 

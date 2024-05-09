@@ -284,7 +284,7 @@ function NavigationLink({ item }: { item: any }) {
       </a>
     )
   }
-// Logic For UI DROPDOWNS
+  // Logic For UI DROPDOWNS
   return (
     <Disclosure as="div">
       {({ open }) => (
@@ -292,7 +292,7 @@ function NavigationLink({ item }: { item: any }) {
           <Disclosure.Button
             className={classNames(
               item.current ? 'bg-gray-50' : 'hover:bg-gray-50',
-              'flex w-full items-center gap-x-3 rounded-md p-2 text-right text-sm font-semibold leading-6 text-gray-700',
+              'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold leading-6 text-gray-700',
             )}
           >
             <ChevronRightIcon
@@ -319,7 +319,7 @@ function NavigationLink({ item }: { item: any }) {
 
 export default function SideBarCustom() {
   return (
-    <div className="bg-green-100 max-w-[350px] flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 px-6" >
+    <div className=" fixed  z-20 flex h-full max-w-[300px]  grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
       <nav className=" flex flex-1 flex-col">
         <ul role="list" className="flex flex-1 flex-col gap-y-2">
           {navigation.map((item) => (
