@@ -82,8 +82,8 @@ function TableRow({ repository }: RowData) {
               </div>
             </div>
 
-            <Disclosure.Panel className="text-gray-500">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
+            <Disclosure.Panel className="text-gray-500 mb-4">
+              <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-3">
                 <div>
                   <div>
                     <Image
@@ -131,7 +131,7 @@ function TableRow({ repository }: RowData) {
                   </div>
                   <div>
                     <div className="text-tiny font-bold uppercase">impact</div>
-                    <div className="grid grid-cols-3 ">
+                    <div className="grid grid-cols-3 gap-3 ">
                       {repository.content.stats.map((stat: StatProps) => (
                         <Stats
                           key={stat.title}
@@ -142,6 +142,7 @@ function TableRow({ repository }: RowData) {
                     </div>
                   </div>
                   <div>
+                  <div className='py-2'></div>
                     <div className="text-tiny font-bold uppercase ">news</div>
                     <div className="block">
                       {repository.content.listContent.map(
@@ -156,9 +157,10 @@ function TableRow({ repository }: RowData) {
                       )}
                     </div>
                   </div>
-                  <div>
-                    <div className="text-small uppercase ">features</div>
-                    <div className=" grid grid-cols-3 ">
+                  <div className='py-2'></div>
+                  <div className=''>
+                    <div className="text-tiny font-bold uppercase ">features</div>
+                    <div className=" grid grid-cols-3 py-2 ">
                       {repository.content.features.map((feature, index) => (
                         <CardSquaredImage
                           key={index}

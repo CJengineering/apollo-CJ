@@ -319,7 +319,7 @@ function NavigationLink({ item }: { item: any }) {
 
 export default function SideBarCustom() {
   return (
-    <div className=" fixed  z-20 flex h-full max-w-[300px]  grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
+    <div className=" fixed  z-20 flex h-full max-w-[250px]  grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
       <nav className=" flex flex-1 flex-col">
         <ul role="list" className="flex flex-1 flex-col gap-y-2">
           {navigation.map((item) => (
