@@ -2,6 +2,7 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronRightIcon } from '@heroicons/react/20/solid'
 import { Key } from 'react'
+
 // content for the sidebar
 const navigation = [
   {
@@ -123,7 +124,7 @@ const navigation = [
         children: [
           { name: 'Overview', href: '#', current: false },
           {
-            name: 'Jameel Observatory for Food Security Early Action',
+            name: 'Food Security Early Action',
             children: [
               { name: 'Overview', href: '#', current: false },
               { name: 'Reports', href: '#', current: false },
@@ -145,7 +146,7 @@ const navigation = [
               },
             ],
           },
-          { name: 'Jameel Observatory CREWSNET', href: '#', current: false },
+          { name: 'CREWSNET', href: '#', current: false },
         ],
       },
       {
@@ -253,17 +254,6 @@ const navigation = [
   { name: 'News', href: '#', current: false },
   { name: 'Press', href: '#', current: false },
   { name: 'Events', href: '#', current: false },
-  {
-    name: 'Stories',
-    current: false,
-    children: [
-      { name: 'A Cairo Cornerstone', href: '#' },
-      { name: 'GCC Climate and Liveability', href: '#' },
-      { name: 'GCC Heat Tracker', href: '#' },
-      { name: 'Harvesting Hope', href: '#' },
-      { name: 'A History of Healthcare in Saudi Arabia', href: '#' },
-    ],
-  },
 ]
 
 function classNames(...classes: any) {
@@ -277,14 +267,15 @@ function NavigationLink({ item }: { item: any }) {
         href={item.href}
         className={classNames(
           item.current ? 'bg-gray-50' : 'hover:bg-gray-50',
-          'block rounded-md py-2 pl-10 pr-2 text-sm  leading-6 text-gray-700',
+          'block py-1 ml-5 pl-4 pr-2 text-sm leading-5 text-gray-700',
         )}
       >
         {item.name}
       </a>
     )
   }
-  // Logic For UI DROPDOWNS
+  
+// Logic For UI DROPDOWNS //
   return (
     <Disclosure as="div">
       {({ open }) => (
@@ -292,7 +283,7 @@ function NavigationLink({ item }: { item: any }) {
           <Disclosure.Button
             className={classNames(
               item.current ? 'bg-gray-50' : 'hover:bg-gray-50',
-              'flex w-full items-center gap-x-3 rounded-md p-2 text-left text-sm font-semibold leading-6 text-gray-700',
+              'flex w-full items-center gap-x-3 p-1 text-left text-sm leading-6 text-gray-700',
             )}
           >
             <ChevronRightIcon
@@ -319,9 +310,9 @@ function NavigationLink({ item }: { item: any }) {
 
 export default function SideBarCustom() {
   return (
-    <div className=" fixed  z-20 flex h-full max-w-[250px]  grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6">
+    <div className="fixed z-20 flex h-full w-[250px] grow flex-col gap-y-2 overflow-y-auto border-r border-gray-200 bg-white px-0">
       <nav className=" flex flex-1 flex-col">
-        <ul role="list" className="flex flex-1 flex-col gap-y-2">
+        <ul role="list" className="flex flex-1 flex-col gap-y-1">
           {navigation.map((item) => (
             <li key={item.name}>
               <NavigationLink item={item} />

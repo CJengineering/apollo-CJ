@@ -20,5 +20,5 @@ export default function SourceContainer({
       return date
     }
   }
-  return <div className= 'text-small font-normal'>{`${source} | ${formatDate(date)}`}</div>
+  return <div className={`text-xs uppercase leading-4 ${ibm_plex_mono.className}`}>{`${source} | ${formatDate(date)}`}</div>
 }

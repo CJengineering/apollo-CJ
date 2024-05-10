@@ -14,12 +14,12 @@ export default function CardProgramme({
       <div className="aspect-square overflow-hidden">
         <Image className="h-full w-full object-cover" src={imageUrl} alt="" />
 
-        <div className="absolute inset-0 bg-gray-600 opacity-80"></div>
-        <div className="absolute bottom-4 left-4 text-white">
-          <div className="costa-extra-bold xl:text-5xl text-xl uppercase">
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute bottom-6 left-6 right-6 text-white">
+          <div className="costa-extra-bold text-4xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl 2xl:text-4xl">
             {programmeTitle}
           </div>
-          <div className={`xl:text-xl text-small uppercase ${ibm_plex_mono.className}`}>
+          <div className={`text-medium uppercase text-gray-300 leading-5 ${ibm_plex_mono.className}`}>
             {programmeType}
           </div>
         </div>
