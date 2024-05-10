@@ -122,7 +122,7 @@ export default function ContentPeople() {
       <SectionUnderline>
         <div>
           <div className="text-tiny font-bold uppercase ">PRESS & NEWS</div>
-          <div className="grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-6">
+          <div className="grid grid-cols-1 gap-1 lg:grid-cols-2 lg:gap-3">
             {[
               {
                 title: 'Antibiotic identified by AI',

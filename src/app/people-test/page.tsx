@@ -8,7 +8,7 @@ export default function People() {
     <>
     <LayoutMain
       mainContent={<ContentPeople />}
-      tocContent={<TocComponent/>}
+      tocContent={''}
     />
   </>
   )
