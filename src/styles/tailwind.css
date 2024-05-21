@@ -111,7 +111,50 @@
 }
 .spacer {
     display: block;
-    height: 80px; /* Adjust the height as needed */
-    margin-top: -80px; /* Adjust the negative margin to offset the height */
+    height: 80px;
+    margin-top: -80px;
     visibility: hidden;
 }
+.carouselDaisy {
+    display: flex;                
+    overflow-x: auto;               
+    scroll-snap-type: x mandatory; 
+    gap: 16px;                  
+    padding: 16px;                 
+    border-radius: 8px;           
+    background-color: #333;         
+    max-width: 400px;            
+    
+    }
+    .carousel {
+        display: flex;                
+        overflow-x: auto;               
+        scroll-snap-type: x mandatory; 
+        gap: 16px;                  
+        padding: 16px;                 
+        border-radius: 8px;           
+         
+        max-width: 350px;            
+        
+        }
+
+  .carousel-item {
+    flex: 0 0 auto;                 
+    scroll-snap-align: start; 
+    position: relative;           
+  }
+  
+  .carousel-item img {
+    display: block;           
+    width: 100%;                 
+    height: auto;                  
+    border-radius: 8px;             
+  }
+  .custom-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .custom-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

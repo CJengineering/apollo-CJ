@@ -39,37 +39,37 @@ function TableRow({ repository }: RowData) {
       <Disclosure>
         {({ open }) => (
           <>
-            <div className="grid min-w-full grid-cols-5 px-2  border-gray-300">
-              <div
-                className={`col-span-4 py-3 text-left text-gray-600 md:col-span-1 ${open ? 'opacity-100' : 'opacity-100'}`}
-              >
-                <h2 className="costa-bold text-lg uppercase">
-                  {repository.top.name}
-                </h2>
-                <h3 className="text-sm capitalize ">
-                  {repository.top.description}
-                </h3>
-              </div>
-              <div
-                className={`hidden py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
-              >
-                <div className="d">{repository.top.mission}</div>
-              </div>
-              <div
-                className={` hidden items-center py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
-              >
-                <div className="text-sm"> {repository.top.year}</div>
-              </div>
-              <div
-                className={` hidden items-center py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
-              >
-                <div className="text-sm">
-                  {repository.top.partners.join(', ')}
+            <Disclosure.Button className="">
+              <div className="grid min-w-full grid-cols-5 border-gray-300  px-2">
+                <div
+                  className={`col-span-4 py-3 text-left text-gray-600 md:col-span-1 ${open ? 'opacity-100' : 'opacity-100'}`}
+                >
+                  <h2 className="costa-bold text-lg uppercase">
+                    {repository.top.name}
+                  </h2>
+                  <h3 className="text-sm capitalize ">
+                    {repository.top.description}
+                  </h3>
                 </div>
-              </div>
-              <div className="flex items-center justify-end   py-3 text-right text-gray-600">
-                <>
-                  <Disclosure.Button className="">
+                <div
+                  className={`hidden py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
+                >
+                  <div className="d">{repository.top.mission}</div>
+                </div>
+                <div
+                  className={` hidden items-center py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
+                >
+                  <div className="text-sm"> {repository.top.year}</div>
+                </div>
+                <div
+                  className={` hidden items-center py-3 text-left text-gray-600 md:block ${open ? 'opacity-0' : 'opacity-100'}`}
+                >
+                  <div className="text-sm">
+                    {repository.top.partners.join(', ')}
+                  </div>
+                </div>
+                <div className="flex items-center justify-end   py-3 text-right text-gray-600">
+                  <>
                     <div
                       className={
                         open ? 'rotate-45 transform text-xl' : 'text-xl'
@@ -77,21 +77,16 @@ function TableRow({ repository }: RowData) {
                     >
                       +
                     </div>
-                  </Disclosure.Button>
-                </>
+                  </>
+                </div>
               </div>
-            </div>
+            </Disclosure.Button>
 
-            <Disclosure.Panel className="text-gray-500 mb-4">
+            <Disclosure.Panel className="mb-4 text-gray-500">
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-3">
                 <div>
                   <div>
-                    <Image
-                      className=" object-fit w-24"
-                      src={logo}
-                      alt=""
-                    
-                    />
+                    <Image className=" object-fit w-24" src={logo} alt="" />
                   </div>
                   <div className="grid grid-cols-3 gap-2 py-4 ">
                     <div>
@@ -110,16 +105,18 @@ function TableRow({ repository }: RowData) {
                       />
                     </div>
                   </div>
-                  <p className='w-[90%]'>{repository.content.fullDescription}</p>
+                  <p className="w-[90%]">
+                    {repository.content.fullDescription}
+                  </p>
                   <div className="py-2"></div>
                   <SocialMediaList {...repository.content.socialMediaLinks} />
 
                   <div className="py-2"></div>
                   <ButtonCJ>Discover</ButtonCJ>
                 </div>
-              
+
                 <div>
-                <div className="py-2"></div>
+                  <div className="py-2"></div>
                   <div className="grid grid-cols-3">
                     <ListSmall data={repository.content.leadership?.data} />
                     <ListSmall
@@ -142,7 +139,7 @@ function TableRow({ repository }: RowData) {
                     </div>
                   </div>
                   <div>
-                  <div className='py-2'></div>
+                    <div className="py-2"></div>
                     <div className="text-tiny font-bold uppercase ">news</div>
                     <div className="block">
                       {repository.content.listContent.map(
@@ -157,9 +154,11 @@ function TableRow({ repository }: RowData) {
                       )}
                     </div>
                   </div>
-                  <div className='py-2'></div>
-                  <div className=''>
-                    <div className="text-tiny font-bold uppercase ">features</div>
+                  <div className="py-2"></div>
+                  <div className="">
+                    <div className="text-tiny font-bold uppercase ">
+                      features
+                    </div>
                     <div className=" grid grid-cols-3 py-2 ">
                       {repository.content.features.map((feature, index) => (
                         <CardSquaredImage
@@ -182,7 +181,7 @@ function TableRow({ repository }: RowData) {
 export default function TableCJ() {
   return (
     <div className="overflow-x-auto">
-      <div className="text-small grid min-w-full grid-cols-5 px-2  border-y-[1px]  border-gray-300 bg-gray-100 ">
+      <div className="text-small grid min-w-full grid-cols-5 border-y-[1px]  border-gray-300  bg-gray-100 px-2 ">
         {/* Header */}
         <div className=" py-3 text-left font-semibold uppercase tracking-wider text-gray-600">
           Name

@@ -8,15 +8,27 @@ import SourceContainer from '@/components/layout/SourceContainer'
 import Header4 from '@/components/typography/Header4'
 import ButtonCJ from '@/components/basic components/ButtonCJ'
 
-
 import Stats from '@/components/basic components/Stats'
 import TabsCJ from '@/components/custom components/TabsCJ'
 import TableCJ from '@/components/custom components/TableCJ'
 import ListContent from '@/components/basic components/ListContent'
 import ListSmall from '@/components/basic components/ListSmall'
 import SocialMediaList from '@/components/basic components/SocialMediaList'
+import Accordion from '@/components/basic components/Accordion'
+import Caroussel from '@/components/basic components/Caroussel'
+import CarousselForComponents from '@/components/basic components/CarousselForComponents'
 
 const data = { news: ['name one', 'name two'] }
+const imageLinks = [
+  'https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg',
+  'https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg',
+  'https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg',
+  'https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg',
+  'https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg',
+  'https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg',
+  'https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg',
+]
+
 const socialMediaLinks = {
   instagram: {
     url: 'https://instagram.com/yourprofile',
@@ -250,6 +262,82 @@ export default async function Home() {
               <div className="w-full">
                 <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
                   <TabsCJ />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li className="py-4">
+            <div className="flex">
+              <div>
+                <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
+                  Card programme
+                </h4>
+                <p className="mt-1 ">Now its just Image card</p>
+              </div>
+            </div>
+            <div className=" gap-5">
+              <div className="w-full">
+                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                  <Accordion
+                    panelContent={
+                      <div>
+                        <ol>
+                          <li>
+                            any type of component or html can be passed here
+                          </li>
+                        </ol>
+                      </div>
+                    }
+                    sentence={
+                      'Put your message here and pass any type of component '
+                    }
+                    bgColor="bg-pink-400"
+                  ></Accordion>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li className="py-4">
+            <div className="flex">
+              <div>
+                <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
+                  Card programme
+                </h4>
+                <p className="mt-1 ">Now its just Image card</p>
+              </div>
+            </div>
+            <div className=" gap-5">
+              <div className="w-full">
+                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                  <Caroussel images={imageLinks} />
+                </div>
+              </div>
+            </div>
+          </li>
+          <li className="py-4">
+            <div className="flex">
+              <div>
+                <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
+                  Card programme
+                </h4>
+                <p className="mt-1 ">Now its just Image card</p>
+              </div>
+            </div>
+            <div className=" gap-5">
+              <div className="w-full">
+                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                  <CarousselForComponents>
+                    <div className="h-48 w-48">
+                      <CardSquaredImage imageUrl={testImage} />
+                    </div>
+                    <div className="h-48 w-48">
+                      <CardSquaredImage imageUrl={testImage} />
+                    </div>
+                    <div className="h-48 w-48">
+                      <CardSquaredImage imageUrl={testImage} />
+                    </div>
+                 
+                  </CarousselForComponents>
                 </div>
               </div>
             </div>
