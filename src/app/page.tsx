@@ -55,10 +55,10 @@ export default async function Home() {
           <div className="block">
             <div className="w-[400px]">
             <div>
-                <h2 className={`text-2xl font-ibmMono text-red-600 mb-3 `}>
+                <h2 className="text-2xl font-ibmMono text-red-600 mb-3 ">
                   Programme Card
                 </h2>
-                <p className="mb-6">The 'Programme Card' component has an aspect ratio of 1:1 and has a width that adadpts to the contraints of its parent wrapper. It </p>
+                <p className="mb-6">The Programme Card component has an aspect ratio of 1:1 and has a width that adadpts to the contraints of its parent wrapper. It </p>
               </div>
               <div className="">
                 <CardProgramme
@@ -66,7 +66,7 @@ export default async function Home() {
                   programmeTitle="J-PAL"
                   programmeType="abdul latif jameel poverty action lab"
                 />
-                  <SectionUnderline children={undefined} />
+        
               </div>
             </div>
             <div className="flex">
@@ -82,12 +82,12 @@ export default async function Home() {
                   Card 16:9
                 </h2>
                 <p className="mb-6">
-                  The 'Card 16:9' component has an aspect ratio of 16:9 and has a width that adapts to the constraints of its parent wrapper. It also has an icon at the top right which can be changed dynamically based on the type of content it relates to.  
+                  The Card 16:9 component has an aspect ratio of 16:9 and has a width that adapts to the constraints of its parent wrapper. It also has an icon at the top right which can be changed dynamically based on the type of content it relates to.  
                 </p>
               </div>
               <div className="">
                 <CardHorizontal imageUrl={testImage} />
-                <SectionUnderline children={undefined} />
+           
               </div>
             </div>
             <div className="">
@@ -102,11 +102,11 @@ export default async function Home() {
               <h2 className={`text-2xl font-ibmMono text-red-600 mb-3 `}>
                   Card 1:1
                 </h2>
-                <p className="mb-6">The 'Card 1:1' component has an aspect ratio of 1:1 and has a width that adapts to the constraints of its parent wrapper. It also has an icon at the top right which can be changed dynamically based on the type of content it relates to.</p>
+                <p className="mb-6">The Card 1:1 component has an aspect ratio of 1:1 and has a width that adapts to the constraints of its parent wrapper. It also has an icon at the top right which can be changed dynamically based on the type of content it relates to.</p>
               </div>
               <div className="">
                 <CardSquaredImage imageUrl={testImage} />
-                <SectionUnderline children={undefined} />
+           
               </div>
             </div>
             <div className="flex">
@@ -213,7 +213,7 @@ export default async function Home() {
               <h2 className={`text-2xl font-ibmMono text-red-600 mb-3 `}>
                 List item (text only)
               </h2>
-              <p className="mb-6 ">The 'List item (text only)' component contains a 'title' and 'subtext' which can contain one or more pieces of dynamic data from the content type from which the list item's data is pulled.</p>
+              <p className="mb-6 ">The List item (text only) component contains a title and subtext which can contain one or more pieces of dynamic data from the content type from which the list item s data is pulled.</p>
             </div>
           </div>
           <div className=" gap-5">
