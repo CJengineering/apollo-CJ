@@ -17,6 +17,7 @@ import SocialMediaList from '@/components/basic components/SocialMediaList'
 import Accordion from '@/components/basic components/Accordion'
 import Caroussel from '@/components/basic components/Caroussel'
 import CarousselForComponents from '@/components/basic components/CarousselForComponents'
+import CarousselMIT from '@/components/basic components/CarousselMIT'
 
 const data = { news: ['name one', 'name two'] }
 const imageLinks = [
@@ -286,12 +287,13 @@ export default async function Home() {
                             any type of component or html can be passed here
                           </li>
                         </ol>
+                        
                       </div>
                     }
                     sentence={
                       'Put your message here and pass any type of component '
                     }
-                    bgColor="bg-pink-400"
+                    bgColor="bg-blue-400"
                   ></Accordion>
                 </div>
               </div>
@@ -338,6 +340,23 @@ export default async function Home() {
                     </div>
                  
                   </CarousselForComponents>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li className="py-4">
+            <div className="flex">
+              <div>
+                <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
+                  Card programme
+                </h4>
+                <p className="mt-1 ">Now its just Image card</p>
+              </div>
+            </div>
+            <div className=" gap-5">
+              <div className="w-full">
+                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                <CarousselMIT />
                 </div>
               </div>
             </div>

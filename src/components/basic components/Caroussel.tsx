@@ -49,7 +49,7 @@ const Carousel = ({ images }: CarouselProps) => {
       </div>
       <div
         ref={carouselRef}
-        className="carouselDaisy carousel-center bg-neutral rounded-box custom-scrollbar space-x-4 overflow-x-auto p-4"
+        className="carouselDaisy carousel-center bg-neutral rounded-box  custom-scrollbar space-x-4 overflow-x-auto p-4"
       >
         {images.map((image, index) => (
           <div key={index} className="carousel-item flex-shrink-0">
