@@ -40,7 +40,7 @@ const CarouselMIT: React.FC<PropsCarousselMIT> = ({
       >
         {content.map((content, index) => (
           <div key={index} className="  bg-red-100 ">
-            <div className={`w-[${widthMobile}px] md:w-[${width}px]`}>{content}</div>
+            <div  className={`w-[${widthMobile}px] md:w-[${width}px]`}>{content}</div>
           </div>
         ))}
       </div>

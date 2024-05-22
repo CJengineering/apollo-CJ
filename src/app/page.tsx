@@ -46,42 +46,81 @@ const socialMediaLinks = {
   },
 }
 const components = [
-  <CardProgramme
-    imageUrl={testImage}
-    programmeTitle="J-PAL"
-    programmeType="abdul latif jameel poverty action lab"
-  />,
-  <CardProgramme
-    imageUrl={testImage}
-    programmeTitle="J-PAL"
-    programmeType="abdul latif jameel poverty action lab"
-  />,
-  <CardProgramme
-    imageUrl={testImage}
-    programmeTitle="J-PAL"
-    programmeType="abdul latif jameel poverty action lab"
-  />,
-  <CardProgramme
-    imageUrl={testImage}
-    programmeTitle="J-PAL"
-    programmeType="abdul latif jameel poverty action lab"
-  />,
-  <CardProgramme
-    imageUrl={testImage}
-    programmeTitle="J-PAL"
-    programmeType="abdul latif jameel poverty action lab"
-  />,
-  <CardProgramme
-  imageUrl={testImage}
-  programmeTitle="J-PAL"
-  programmeType="abdul latif jameel poverty action lab"
-/>,
-  <CardProgramme
-  imageUrl={testImage}
-  programmeTitle="J-PAL"
-  programmeType="abdul latif jameel poverty action lab"
-/>,
+  {
+    key: 'component1',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  },
+  {
+    key: 'component2',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  },
+  {
+    key: 'component3',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  },
+  {
+    key: 'component4',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  },
+  {
+    key: 'component5',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  },
+  {
+    key: 'component6',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  },
+  {
+    key: 'component7',
+    element: (
+      <CardProgramme
+        imageUrl={testImage}
+        programmeTitle="J-PAL"
+        programmeType="abdul latif jameel poverty action lab"
+      />
+    )
+  }
 ]
+const carouselContent = components.map(component => (
+  <div key={component.key}>{component.element}</div>
+))
+
 export default async function Home() {
   return (
     <div>
@@ -357,7 +396,7 @@ export default async function Home() {
             <div className=" gap-5">
               <div className=" w-full md:w-2/3">
                 <div className="">
-                  <CarousselMIT content={components} widthMobile='200' width='300'/>
+                  <CarousselMIT content={carouselContent} widthMobile='200' width='300'/>
                 </div>
               </div>
             </div>
