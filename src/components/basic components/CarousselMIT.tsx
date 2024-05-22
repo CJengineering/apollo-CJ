@@ -1,64 +1,65 @@
 'use client'
 
-import React, { useRef } from 'react';
+import React, { useRef } from 'react'
+interface PropsCarousselMIT {
+  content: React.ReactNode[]
+  width?: string
+  widthMobile:string
+}
 
-const CarouselMIT: React.FC = () => {
-  const carouselRef = useRef<HTMLDivElement>(null);
+const CarouselMIT: React.FC<PropsCarousselMIT> = ({
+  content,
+  width,
+  widthMobile
+}: PropsCarousselMIT) => {
+  const carouselRef = useRef<HTMLDivElement>(null)
 
   const scrollLeft = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: -carouselRef.current.offsetWidth,
         behavior: 'smooth',
-      });
+      })
     }
-  };
+  }
 
   const scrollRight = () => {
     if (carouselRef.current) {
       carouselRef.current.scrollBy({
         left: carouselRef.current.offsetWidth,
         behavior: 'smooth',
-      });
+      })
     }
-  };
+  }
 
   return (
-    <div className="w-full overflow-hidden custom-scrollbar">
+    <div className="custom-scrollbar w-full overflow-hidden">
       <div
         ref={carouselRef}
-        className="flex space-x-4 overflow-x-scroll scrollbar-hide"
+        className="scrollbar-hide flex space-x-4 overflow-x-scroll"
       >
-        {/* Add your images here */}
-        {Array.from({ length: 10 }).map((_, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 w-32 h-32 bg-gray-300 flex   items-center justify-center"
-          >
-            <img
-              src={`https://via.placeholder.com/128?text=${index + 1}`}
-              alt={`Image ${index + 1}`}
-              className="w-full h-full object-cover"
-            />
+        {content.map((content, index) => (
+          <div key={index} className="  bg-red-100 ">
+            <div className={`w-[${widthMobile}px] md:w-[${width}px]`}>{content}</div>
           </div>
         ))}
       </div>
-      <div className="flex justify-center mt-4 space-x-4">
+      <div className="mt-4 flex justify-center space-x-4">
         <button
           onClick={scrollLeft}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
+          className="rounded bg-blue-500 px-4 py-2 text-white"
         >
-           &#10094;
+          &#10094;
         </button>
         <button
           onClick={scrollRight}
-          className="px-4 py-2 bg-blue-500 text-white rounded"
+          className="rounded bg-blue-500 px-4 py-2 text-white"
         >
-                &#10095;
+          &#10095;
         </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CarouselMIT;
+export default CarouselMIT
