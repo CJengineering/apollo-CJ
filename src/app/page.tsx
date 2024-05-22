@@ -1,11 +1,16 @@
 import CardHorizontal from '@/components/basic components/CardHorizontal'
 import React from 'react'
-import testImage from '@/images/test-image.jpg'
+import testImage from '@/images/test_01.webp'
 import CardProgramme from '@/components/basic components/CardProgramme'
 import CardSquaredImage from '@/components/basic components/CardSquared'
 import SectionUnderline from '@/components/layout/SectionUnderline'
 import SourceContainer from '@/components/layout/SourceContainer'
+import Header1 from '@/components/typography/Header1'
+import Header2 from '@/components/typography/Header2'
+import Header3 from '@/components/typography/Header3'
 import Header4 from '@/components/typography/Header4'
+import Header5 from '@/components/typography/Header5'
+import Header6 from '@/components/typography/Header6'
 import ButtonCJ from '@/components/basic components/ButtonCJ'
 
 import Stats from '@/components/basic components/Stats'
@@ -62,18 +67,13 @@ export default async function Home() {
                     means not finished
                   </p>
                 </div>
-              </div>
-            </div>
-          </li>
-          <li className="py-4">
-            <div className="flex gap-5">
-              <div className="w-[400px]">
-                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                <div className="">
                   <CardProgramme
                     imageUrl={testImage}
-                    programmeTitle="J-Pal"
+                    programmeTitle="J-PAL"
                     programmeType="abdul latif jameel poverty action lab"
                   />
+                    <SectionUnderline children={undefined} />
                 </div>
               </div>
               <div className="flex">
@@ -84,27 +84,26 @@ export default async function Home() {
                   <p className="mt-1">Now its just Image card</p>
                 </div>
               </div>
+              <div className="">
+              </div>
             </div>
           </li>
-          <li className="py-4">
-            <div className="flex gap-5">
+
+          <li className="py-9">
+            <div className="block">
               <div className="w-[400px]">
                 <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
                   <CardSquaredImage imageUrl={testImage} />
+                  <SectionUnderline children={undefined} />
                 </div>
               </div>
               <div className="flex">
-                <div>
-                  <h4 className="w costa-extra-bold text-lg font-bold text-red-600 ">
-                    Card programme
-                  </h4>
-                  <p className="mt-1">Now its just Image card</p>
-                </div>
+               
               </div>
             </div>
           </li>
-          <li className="py-4">
-            <div className="flex gap-5">
+          <li className="py-9">
+            <div className="block">
               <div className="w-[400px]">
                 <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
                   <SectionUnderline>
@@ -114,19 +113,14 @@ export default async function Home() {
                 </div>
               </div>
               <div className="flex">
-                <div>
-                  <h4 className="w costa-extra-bold text-lg font-bold text-red-600 ">
-                    Card programme
-                  </h4>
-                  <Header4>Text</Header4>
-                </div>
+
               </div>
             </div>
           </li>
-          <li className="py-4">
+          <li className="py-9">
             <div className="flex gap-5">
               <div className="w-[400px]">
-                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                <div className="">
                   <SourceContainer
                     source="New York Times"
                     date={new Date(2024, 1, 16)}
@@ -139,15 +133,15 @@ export default async function Home() {
                   <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
                     Card programme
                   </h4>
-                  <p className="mt-1 ">Now its just Image card</p>
+                  <p className="mb-6 ">Now its just Image card</p>
                 </div>
               </div>
             </div>
           </li>
-          <li className="py-4">
+          <li className="py-9">
             <div className="flex gap-5">
               <div className="w-[400px]">
-                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                <div className="">
                   <ButtonCJ>Click Me</ButtonCJ>
                 </div>
               </div>
@@ -156,15 +150,15 @@ export default async function Home() {
                   <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
                     Card programme
                   </h4>
-                  <p className="mt-1 ">Now its just Image card</p>
+                  <p className="mb-6 ">Now its just Image card</p>
                 </div>
               </div>
             </div>
           </li>
-          <li className="py-4">
+          <li className="py-9">
             <div className="flex gap-5">
               <div className="w-[400px]">
-                <div className="w-full border-2 border-dotted border-gray-800 p-4 ">
+                <div className="">
                   <Stats title="$21M" content="research grants" />
                 </div>
               </div>
@@ -178,13 +172,13 @@ export default async function Home() {
               </div>
             </div>
           </li>
-          <li className="py-4">
+          <li className="py-9">
             <div className="flex">
               <div>
                 <h4 className="w costa-extra-bold text-lg font-bold  text-red-600 ">
                   Card programme
                 </h4>
-                <p className="mt-1 ">Now its just Image card</p>
+                <p className="mb-6 ">Now its just Image card</p>
               </div>
             </div>
             <div className=" gap-5">
